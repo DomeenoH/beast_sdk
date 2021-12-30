@@ -54,7 +54,18 @@ end
 -- 加密第二步，对字符串进行二次加密
 function aowua(str)
 
-end
+    local code = ""
+    local n = 0
+    local i = 1
+    for p, c in utf8.codes(str) do  --p是序号，c是内容
+        local k = string.format("%#x", tonumber(utf8.char(c),16))
+            print(k)
+    end
+    end
+    
+    
+    print("591a7c738bfa003100320033")
+    print(aowua("591a7c738bfa003100320033"))
 
 
 -- 解密第一步，将兽语转换为16进制unicode字符串

@@ -39,7 +39,7 @@ def encode(str):                                        # 输入要转换的字�
         n += 1                                          # n+1 移动到下一位
     return code
 
-# 解码第一步，把兽语转换成16进制Unicode编码堆（每一位都含0x）
+# 解码第一步，把兽语转换成16进制Unicode编码堆
 def decode(str):                                        # 传入兽语
     hexArray = list(str)                                # 
     code = ""                                           # 空字符串，存解密后的

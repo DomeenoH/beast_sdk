@@ -1,7 +1,7 @@
 # 兽音译者（兽语翻译）SDK
 
 
-**采用 `JavaScript` 、 `GoLang` 、 `Python` 、 `PHP` 多端实现。**  
+**采用 `JavaScript` 、 `GoLang` 、 `Python` 、 `PHP` 、 `LUA` 多端实现。**  
 
 可以自定义字符, 可以相互兼容，具体按照需要自行改造。  
 

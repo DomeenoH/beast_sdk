@@ -91,12 +91,33 @@ function hex2str(str)
     return (ret)
 end
 
+-- 判断是否是兽语
+function isAouwa(str)
+	a = 1
+	b = str2hex(str)
+	while (a < #b) do
+		c = string.sub(b,a,a+3)
+		if (not(c=="554a" or c=="55f7" or c=="545c" or c=="007e")) then
+			return false
+		end
+		a = a + 4
+	end
+	return true
+end
+
+-- QQ机器人相关的function
 function beast(msg)
 return "{nick}说：\n"..OwO(string.sub(msg.fromMsg,7,-1))
 end
 
 function renhua(msg)
-return "{nick}说：\n"..hex2str(msg.fromMsg)
+	local detector = string.match(msg.fromMsg,"[%s]*(.-)[%s]*$",1)
+	b = isAouwa(detector)
+	if b then
+		return "{nick}说：\n"..hex2str(msg.fromMsg)
+	else
+		return "嗷呜？这可不像是兽语呢，你确定没讲错吗？"
+	end
 end
 
 msg_order["兽语"] = "beast"

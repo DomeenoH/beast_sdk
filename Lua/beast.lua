@@ -7,6 +7,8 @@ function str2hex(str)
             charHexStr = "0" .. charHexStr
         elseif string.len(charHexStr) == 2 then
             charHexStr = "00" .. charHexStr
+        elseif string.len(charHexStr) == 1 then --解决了换行无法正常转换的问题
+            charHexStr = "000" .. charHexStr
         end
         ret = ret .. charHexStr
     end
